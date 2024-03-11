@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto JavaScript</title>
+</head>
+<body>
+
+<h2>Declarar uma variavel com o modificador const e atribuir um vetor a ela. Associar esse vetor a uma outra variavel e alterar o conteudo da mesma. Imprimir a variavel original. O que acontece? Criar um codigo Javascript com um laco de repetição para imprimir os numeros de 1 a 5 com duas variaveis declaradas dentro do laço. Uma com var e outra com let. Imprimir o valor das 2 apos o laço
+</h2>
+
+<script>
+    const originalArray = [1, 2, 3, 4, 5]; 
+    let anotherArray = originalArray; 
+    
+    anotherArray[0] = 10; 
+    
+    console.log("originalArray após a modificação:", originalArray); 
+    
+    for (var i = 1; i <= 5; i++) {
+      let localValue = i; 
+      var globalValue = i; 
+      console.log("Número atual do laço:", i); 
+    }
+    
+    console.log("Valor de globalValue após o laço:", globalValue); 
+    
+    
+    console.log("Valor de localValue após o laço:", localValue); 
+    
+    </script>
+
+</body>
+</html>

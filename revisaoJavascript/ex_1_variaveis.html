@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto JavaScript</title>
+</head>
+<body>
+
+<h2>Projeto JavaScript: Imprimir Números de 1 a 5</h2>
+
+<script>
+for (var i = 1; i <= 5; i++) {
+  let localVar = `Local Value ${i}`;
+  var globalVar = `Global Value ${i}`;
+  console.log(i); 
+}
+
+console.log("Variavel var: ", globalVar); 
+
+// Tentativa de imprimir `localVar` fora do laço resultará em erro, pois `let` tem escopo de bloco
+console.log("Variavel let: ", localVar); 
+
+</script>
+
+</body>
+</html>

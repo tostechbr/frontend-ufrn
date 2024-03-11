@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Nomes com Map</title>
+</head>
+
+<body>
+
+    <h1>Criar uma list (array) com o nome de 3 pessoas. utilizar o metodo map do vetor para criar uma list html</h1>
+
+    <h2>Lista de Nomes</h2>
+
+    <ul id="listaNomes"></ul>
+
+    <script>
+        const nomes = ['Alice', 'Bob', 'Carol'];
+
+        const itensLista = nomes.map(nome => `<li>${nome}</li>`).join('');
+
+
+        document.getElementById('listaNomes').innerHTML = itensLista;
+    </script>
+
+</body>
+
+</html>
