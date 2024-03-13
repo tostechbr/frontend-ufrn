@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Validation Form</title>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<form id="numberForm">
+    <label for="numberInput">Enter a number between 0 and 10:</label>
+    <input type="number" id="numberInput" name="numberInput" required>
+    <button type="submit">Submit</button>
+    <p id="errorMessage" class="error" style="display:none;">Please enter a number between 0 and 10.</p>
+</form>
+
+<script>
+document.getElementById('numberForm').onsubmit = function(event) {
+    event.preventDefault();
+    var inputNumber = document.getElementById('numberInput').value;
+    if(inputNumber >= 0 && inputNumber <= 10) {
+        alert('Number is valid!');
+        document.getElementById('errorMessage').style.display = 'none';
+    } else {
+        document.getElementById('errorMessage').style.display = 'block';
+    }
+};
+</script>
+
+</body>
+</html>
